@@ -36,20 +36,6 @@ class Catlog extends Controller
         $product->product_status= $request->product_status;
         $product->product_category_id= $request->product_category_id;
         $saved=$product->save();
-          if ($request->has('size') && $request->has('price')) {
-                $sizes = $request->input('size');
-                $prices = $request->input('price');
-                foreach ($sizes as $index => $size) {
-                    if (empty($size) || empty($prices[$index])) {
-                        return redirect()->back()->with('error', 'Please Fill All Sizes and Prices');
-                    }
-                    $variant = new Variant();
-                    $variant->variant_name = $size;
-                    $variant->variant_price = $prices[$index];
-                    $variant->variant_product_id = $saved;
-                    $variant->save();
-                }
-            }
         if($saved){
             return redirect()->back()->with('success','Your Product is Sucessfully Added');
         }else{
@@ -62,57 +48,31 @@ class Catlog extends Controller
    public function edit_product(Request $request,$id){
       $product= Product::find($id);
     
-    if($request->hasfile('product_image')){
-        $imageName = time().'.'.$request->product_image->extension();  
-     
-        $request->product_image->move(public_path('storage/product'), $imageName);
-        $product->product_image=$imageName;
-    }
-
-    if($request->hasFile('images')){
+   if($request->hasFile('images')){
         $files = $request->file('images');
         $filess=[];
     foreach($files as $file){
         $filename = time() . $file->getClientOriginalName();   
-        $file->move(public_path('storage/product/multiple'), $filename);
+        $file->move(public_path('storage/product/'), $filename);
         $filess[]=$filename;
     
         }
-        $product->product_multiple_images=json_encode($filess);
+        $product->product_image=json_encode($filess);
 
     }
-
-
         $product->product_name=$request->product_name;
         $product->product_description= $request->product_description;
-        $product->product_brand_id= $request->product_brand_id;
-        $product->product_category_id= $request->product_category_id;
-        $product->product_sub_category_id= $request->product_sub_category_id;
-        $product->product_sku= $request->product_sku;
         $product->product_price= $request->product_price;
-        $product->product_discount_price= $request->product_discount_price;
         $product->product_status= $request->product_status;
-        $product->product_created_by= $request->session()->get('admin_id');
-        $product->product_updated_by= $request->session()->get('admin_id');
-       $saved= $product->save();
-
-        $oldvariant=DB::table('product_variant')->where('product_variant_product_id',$id)->delete();
-        $variant=$request->product_variant;
-        if(isset($variant)){
-            foreach($variant as $variants){
-                $productvariant= new Product_variant();
-                $productvariant->product_variant_variant_id= $variants;
-                $productvariant->product_variant_product_id= $id;
-                $productvariant->save();
-            }
-        }
-        
+        $product->product_category_id= $request->product_category_id;
+        $saved=$product->save();
         if($saved){
-            return redirect()->back()->with('success','Your Product is Sucessfully Updated!');
+            return redirect()->back()->with('success','Your Product is Sucessfully Updated');
         }else{
             return redirect()->back()->with('error','Opps Error!');
 
         }
+      
    }
 
 

@@ -65,12 +65,6 @@
                   </div>
                 </div>
 
-                <div class="row mb-3">
-                  <label for="inputNumber" class="col-sm-2 col-form-label">Image of Product</label>
-                  <div class="col-sm-10">
-                    <input class="form-control" type="file" id="formFile"  name='product_image'>
-                  </div>
-                </div>
 
                 <div class="row mb-3">
                 <div id='slideupload' class="row mb-3">
@@ -81,23 +75,15 @@
                 </div>
               </div>
 
-                <fieldset class="row mb-3">
-                  <legend class="col-form-label col-sm-2 pt-0">Availability</legend>
+              <div class="row mb-3">
+                  <label for="inputNumber" class="col-sm-2 col-form-label">Status of Product</label>
                   <div class="col-sm-10">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="product_status" id="gridRadios1" value="enable" {{($product->product_status=='enable') ? "checked=checked" :'' }}>
-                      <label class="form-check-label" for="gridRadios1">
-                        Available
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="product_status" id="gridRadios2" value="disable" {{($product->product_status=='disable') ? "checked=checked" :'' }}>
-                      <label class="form-check-label" for="gridRadios2">
-                        Out of Stock
-                      </label>
-                    </div>
+                  <select name="product_status" id="product_status" class="form-control">
+                  <option value="enable" {{ $product->product_status == 'enable' ? 'selected' : '' }}>Published</option>
+                  <option value="disable" {{ $product->product_status == 'disable' ? 'selected' : '' }}>Draft</option>
+              </select>
                   </div>
-                </fieldset>
+                </div>
 
                 <div class="row mb-3">
                   <label for="inputText" class="col-sm-2 col-form-label">SKU</label>
