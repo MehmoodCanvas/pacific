@@ -122,31 +122,31 @@
                                 </li>
                                 <li>
                                     <a href="#!">
-                                        <img src="assets/front/images/menu_ico6.png" class="img-fluid" alt="">
+                                        <img src="{{asset('assets/front/images/menu_ico6.png')}}" class="img-fluid" alt="">
                                         <p>Mixed Medium Patches</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#!">
-                                        <img src="assets/front/images/menu_ico7.png" class="img-fluid" alt="">
+                                        <img src="{{asset('assets/front/images/menu_ico7.png')}}" class="img-fluid" alt="">
                                         <p>Chenille Patches</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#!">
-                                        <img src="assets/front/images/menu_ico8.png" class="img-fluid" alt="">
+                                        <img src="{{asset('assets/front/images/menu_ico8.png')}}" class="img-fluid" alt="">
                                         <p>Woven Labels</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#!">
-                                        <img src="assets/front/images/menu_ico9.png" class="img-fluid" alt="">
+                                        <img src="{{asset('assets/front/images/menu_ico9.png')}}" class="img-fluid" alt="">
                                         <p>TPU, Silicone & Specialty Patches</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#!">
-                                        <img src="assets/front/images/menu_ico10.png" class="img-fluid" alt="">
+                                        <img src="{{asset('assets/front/images/menu_ico10.png')}}" class="img-fluid" alt="">
                                         <p>Packaged Patches</p>
                                     </a>
                                 </li>
@@ -159,43 +159,43 @@
                             <ul class="dropdown other_products">
                                 <li>
                                     <a href="#!">
-                                        <img src="assets/front/images/menu_ico11.png" class="img-fluid" alt="">
+                                        <img src="{{asset('assets/front/images/menu_ico11.png')}}" class="img-fluid" alt="">
                                         <p>Lanyards and Trade Show Badges</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#!">
-                                        <img src="assets/front/images/menu_ico12.png" class="img-fluid" alt="">
+                                        <img src="{{asset('assets/front/images/menu_ico12.png')}}" class="img-fluid" alt="">
                                         <p>Silicone Wristbands</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#!">
-                                        <img src="assets/front/images/menu_ico13.png" class="img-fluid" alt="">
+                                        <img src="{{asset('assets/front/images/menu_ico13.png')}}" class="img-fluid" alt="">
                                         <p>Terry Cloth Wristband and Headbands</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#!">
-                                        <img src="assets/front/images/menu_ico14.png" class="img-fluid" alt="">
+                                        <img src="{{asset('assets/front/images/menu_ico14.png')}}" class="img-fluid" alt="">
                                         <p>Challenge Coins, Lapel Pins and Metal Badges</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#!">
-                                        <img src="assets/front/images/menu_ico15.png" class="img-fluid" alt="">
+                                        <img src="{{asset('assets/front/images/menu_ico15.png')}}" class="img-fluid" alt="">
                                         <p>Custom, Private-Label Headwear</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#!">
-                                        <img src="assets/front/images/menu_ico16.png" class="img-fluid" alt="">
+                                        <img src="{{asset('assets/front/images/menu_ico16.png')}}" class="img-fluid" alt="">
                                         <p>Licensed Products</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#!">
-                                        <img src="assets/front/images/menu_ico17.png" class="img-fluid" alt="">
+                                        <img src="{{asset('assets/front/images/menu_ico17.png')}}" class="img-fluid" alt="">
                                         <p>Promotional Products </p>
                                     </a>
                                 </li>
