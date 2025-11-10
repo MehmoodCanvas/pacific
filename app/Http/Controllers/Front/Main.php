@@ -41,4 +41,9 @@ class Main extends Controller
         return view('front.product-detail', compact('product', 'category', 'recentProducts'));
     }
 
+    public function reviews(Request $request){
+
+        return view('front.reviews');
+    }
+
 }

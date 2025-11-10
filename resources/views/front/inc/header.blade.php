@@ -201,7 +201,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="#!">REVIEWS</a></li>
+                        <li><a href="{{ url('reviews') }}">REVIEWS</a></li>
                         <li><a href="#!">Contact Us</a></li>
                         <li><a href="#!">MEET DR. PATCH!</a></li>
                     </ul>

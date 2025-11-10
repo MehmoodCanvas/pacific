@@ -64,6 +64,7 @@ Route::get('/product/{id}', [Main::class, 'product']);
 Route::get('about',[Main::class,'about']);
 Route::get('product/add-to-cart/{id}',[Ecommerce::class,'cart']);
 Route::get('cartCounter',[Ecommerce::class,'cartCounter']);
+Route::get('reviews',[Main::class,'reviews']);
 
 
 
