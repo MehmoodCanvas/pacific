@@ -1,15 +1,17 @@
 <?php
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
+
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Auth;
+
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\Attribute;
 use App\Models\Variant;
 use App\Models\Gift;
-use Illuminate\Support\Facades\DB;
 
 class Catlog extends Controller
 
@@ -52,13 +54,13 @@ class Catlog extends Controller
         $files = $request->file('images');
         $filess=[];
     foreach($files as $file){
+
         $filename = time() . $file->getClientOriginalName();   
         $file->move(public_path('storage/product/'), $filename);
         $filess[]=$filename;
-    
+
         }
         $product->product_image=json_encode($filess);
-
     }
         $product->product_name=$request->product_name;
         $product->product_description= $request->product_description;
