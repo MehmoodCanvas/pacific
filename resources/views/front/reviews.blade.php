@@ -15,7 +15,7 @@
     <div class="container">
         <div class="reviews_wrap_top">
             <h6 class="heading">Love Our Service?</h6>
-            <a href="#" class="common_line_btn">Submit your testimonial.</a>
+            <a href="#sub_review" data-bs-toggle="modal" data-bs-target="#sub_review" class="common_line_btn">Submit your testimonial.</a>
         </div>
         <div class="testimonial_slider">
             <div class="testimonial_slide_wrap">
