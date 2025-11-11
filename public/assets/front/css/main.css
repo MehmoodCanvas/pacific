@@ -1229,7 +1229,7 @@ button.close_btn {
 }
 .quote_modal_input textarea {
     width: 100%;
-    height: 155px;
+    height: 120px;
     background-color: transparent;
     font-family: var(--Kanit-Regular);
     color: var(--black);
@@ -2200,5 +2200,46 @@ button.close_btn {
 }
 .contact-wrap-textarea1 {
     margin: 0px 0px 50px 0px;
+}
+.quote_modal_rating {
+    margin: 0px 0px 10px 0px;
+}
+.quote_modal_input .file_input_wrap {
+    padding: 25px 20px;
+}
+.rating {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 4px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: 1px solid var(--black);
+}
+.rating input {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.rating input::before {
+  content: '\f005';
+  position: absolute;
+  font-family: fontAwesome;
+  font-size: 28px;
+  color: #111;
+  transition: 0.5s;
+}
+.rating input:hover ~ input::before,
+.rating input:hover::before,
+.rating input:checked ~ input::before,
+.rating input:checked::before {
+  color: var(--c);
 }
 /* CONTACT Css  */

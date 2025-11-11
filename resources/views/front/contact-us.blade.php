@@ -18,7 +18,7 @@
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                 <div class="row gy-4">
                     <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                        <a href="#!" class="contact-socials-box">
+                        <a href="https://www.instagram.com/doctorpatch/" target="_blank" class="contact-socials-box">
                             <div class="contact-socials-icon">
                                 <i class="fa-brands fa-instagram"></i>
                             </div>
@@ -28,7 +28,7 @@
                         </a>
                     </div>
                     <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                        <a href="#!" class="contact-socials-box">
+                        <a href="https://www.linkedin.com/in/rich-s-aka-dr-patch-5b85548/" target="_blank" class="contact-socials-box">
                             <div class="contact-socials-icon">
                                 <i class="fa-brands fa-linkedin-in"></i>
                             </div>
@@ -38,7 +38,7 @@
                         </a>
                     </div>
                     <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                        <a href="#!" class="contact-socials-box">
+                        <a href="http://www.twitter.com/doctorpatch" target="_blank" class="contact-socials-box">
                             <div class="contact-socials-icon">
                                 <i class="fa-brands fa-twitter"></i>
                             </div>

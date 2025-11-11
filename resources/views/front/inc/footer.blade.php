@@ -24,17 +24,17 @@
                                         <h3>Quick links</h3>
                                         <ul>
                                             <li>
-                                                <a href="index.php">
+                                                <a href="{{ url('/') }}">
                                                     Home
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="about-us.php">
+                                                <a href="{{ url('about-us') }}">
                                                     About
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#!">
+                                                <a href="{{ url('shop') }}">
                                                     Shop
                                                 </a>
                                             </li>
@@ -44,7 +44,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#!">
+                                                <a href="{{ url('reviews') }}">
                                                     Reviews
                                                 </a>
                                             </li>
@@ -54,12 +54,12 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#!">
+                                                <a href="{{ url('smartpatch') }}">
                                                     SmartPatch®
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#!">
+                                                <a href="{{ url('contact-us') }}">
                                                     Contact
                                                 </a>
                                             </li>
@@ -135,17 +135,17 @@
                                     <div class="footer-wrap-social">
                                         <ul>
                                             <li>
-                                                <a href="#!">
+                                                <a href="https://www.instagram.com/doctorpatch/" target="_blank">
                                                     <i class="fa-brands fa-instagram"></i>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#!">
+                                                <a href="https://www.linkedin.com/in/rich-s-aka-dr-patch-5b85548/" target="_blank">
                                                     <i class="fa-brands fa-linkedin-in"></i>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#!">
+                                                <a href="http://www.twitter.com/doctorpatch" target="_blank">
                                                     <i class="fa-brands fa-twitter"></i>
                                                 </a>
                                             </li>
@@ -381,6 +381,15 @@
                 </div>
                 <div class="quote_modal_input">
                     <input type="email" placeholder="Enter Your Email *" required>
+                </div>
+                <div class="quote_modal_rating">
+                    <div class="rating">
+                        <input type="radio" name="clr" style="--c: #FFC247" />
+                        <input type="radio" name="clr" style="--c: #FFC247" />
+                        <input type="radio" name="clr" style="--c: #FFC247" />
+                        <input type="radio" name="clr" style="--c: #FFC247" />
+                        <input type="radio" name="clr" style="--c: #FFC247" />
+                    </div>
                 </div>
                 <div class="quote_modal_input">
                     <label>Your Picture (optional)</label>
