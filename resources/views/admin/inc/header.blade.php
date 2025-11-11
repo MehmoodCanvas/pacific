@@ -165,8 +165,15 @@
           </li>
           
         </ul>
-      </li><!-- End Charts Nav -->
-
+      </li>
+      <!-- End Charts Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{url('admin/reviews')}}">
+          <i class="bi bi-star"></i>
+          <span>Reviews</span>
+        </a>
+      </li>
+      
 
       <li class="nav-heading">General Setting</li>
       <li class="nav-item">

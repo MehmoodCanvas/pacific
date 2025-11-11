@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Variant;
 use App\Models\Category;
+use App\Models\Ratings;
 
 class Main extends Controller
 {
@@ -42,8 +43,16 @@ class Main extends Controller
     }
 
     public function reviews(Request $request){
-
-        return view('front.reviews');
+        $reviews  = Ratings::OrderBy('ratings_id','DESC')->where('ratings_status',1)->get();
+        return view('front.reviews',compact('reviews'));
     }
 
+
+    public function patch(){
+        return view('front.patch');
+    }
+
+    public function meet_dr(){
+        return view('front.meet-dr-patch');
+    }
 }

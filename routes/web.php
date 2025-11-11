@@ -34,7 +34,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::get('/products', [Dashboard::class, 'products']);
     Route::get('/add-product', [Dashboard::class, 'add_product']);
     Route::get('/category', [Dashboard::class, 'category']);
-    Route::get('/orders', [Dashboard::class, 'orders']);
+    Route::get('/reviews', [Dashboard::class, 'review']);
     Route::get('/product-edit/{id}', [Dashboard::class, 'edit_product']);
     Route::get('/order-detail/{id}', [Dashboard::class, 'order_view']);
     Route::get('product-delete/{id}',[Catlog::class,'destroy']);
@@ -42,6 +42,8 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::get('/category-edit/{id}', [Dashboard::class, 'edit_category']);
 
     //POST METHOD
+    Route::post('/update-review-status', [Dashboard::class, 'updateStatus'])
+    ->name('admin.updateReviewStatus');
     Route::post('post-product/',[Catlog::class,'store_product']);
     Route::post('post-category/',[Catlog::class,'store_category']);
     Route::put('edit-category/{id}',[Catlog::class,'edit_category']);
@@ -65,12 +67,12 @@ Route::get('about',[Main::class,'about']);
 Route::get('product/add-to-cart/{id}',[Ecommerce::class,'cart']);
 Route::get('cartCounter',[Ecommerce::class,'cartCounter']);
 Route::get('reviews',[Main::class,'reviews']);
-
-
+Route::get('smart-patch',[Main::class,'patch']);
+Route::get('meet-dr-patch',[Main::class,'meet_dr']);
 
 
 
 
 Route::post('addtoCart',[Ecommerce::class,'builder_cart']);
-
+Route::post('review-post',[Ecommerce::class,'store_review'])->name('post.review');
 Route::post('lead',[Ecommerce::class,'lead'])->name('lead');

@@ -73,7 +73,7 @@
                                 <div class="index_eight_cr_box">
                                     <div class="index_eight_cr_img_wrap">
                                         <div class="index_eight_cr_img">
-                                                @php 
+                                    @php 
                                         $image = json_decode($product->product_image);
                                     @endphp
 

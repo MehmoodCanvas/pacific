@@ -87,7 +87,7 @@
     <div class="container">
         <div class="common_top_text">
             <h6 class="heading">Recent Products</h6>
-            <a href="#!" class="common_line_btn dark_btn">Shop ALL</a>
+            <a href="{{ url('shop') }}" class="common_line_btn dark_btn">Shop ALL</a>
         </div>
         <div class="row gy-lg-5">
             @foreach($recentProducts as $recentProduct)
@@ -109,7 +109,6 @@
                     </div>
                     <div class="index_eight_cr_text">
                         <h6>{{ $recentProduct->product_name }}</h6>
-                        <p class="desc">{{ $recentProduct->product_description }}</p>
                         <a href="{{ url('product/'.$recentProduct->product_slug) }}" class="common_btn dark_btn">CUSTOMIZE</a>
                     </div>
                 </div>
@@ -140,7 +139,6 @@
                         </svg>
                     </div>
                 </div>
-                <!--<a href="#!" class="common_line_btn dark_btn">Shop ALL</a>-->
             </div>
         </div>
         <div class="index_eight_tabs">

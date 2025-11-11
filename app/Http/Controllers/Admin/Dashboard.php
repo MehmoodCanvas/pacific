@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Product;
+use App\Models\Ratings;
 
 use Illuminate\Support\Facades\DB;
 
@@ -73,6 +74,33 @@ class Dashboard extends Controller
        return view('admin.invoice',compact('order','product'));
     }
 
-  
+    public function review(){
+        $reviews  = Ratings::OrderBy('ratings_id','DESC')->get();
+        return view('admin.reviews',compact('reviews'));
+    }
+    
+
+    public function updateStatus(Request $request){
+        $request->validate([
+        'id' => 'required|integer',
+        'status' => 'required|in:0,1',
+    ]);
+
+    $review = Ratings::find($request->id);
+    if (!$review) {
+        return response()->json(['success' => false, 'message' => 'Review not found.']);
+    }
+
+    $review->ratings_status = $request->status;
+    $review->save();
+
+    return response()->json([
+        'success' => true,
+        'message' => $review->status == 1
+            ? 'Review approved successfully.'
+            : 'Review disabled successfully.'
+    ]);
+
+    }
 
 }

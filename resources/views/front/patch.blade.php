@@ -77,4 +77,4 @@
     </div>
 </section>
 
-@include('front.inc.header')
+@include('front.inc.footer')

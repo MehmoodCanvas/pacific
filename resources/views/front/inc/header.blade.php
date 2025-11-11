@@ -153,7 +153,7 @@
                             </ul>
                         </li>
                         <li><a href="#!">TRULYCUSTOM™ HEADWEAR</a></li>
-                        <li><a href="{{ url('smartpatch') }}">SMARTPATCH <img src="assets/front/images/r_ico.png" class="img-fluid r_img" alt=""></a></li>
+                        <li><a href="{{ url('smart-patch') }}">SMARTPATCH <img src="assets/front/images/r_ico.png" class="img-fluid r_img" alt=""></a></li>
                         <li class="has_dropdown">
                             <a href="#!">OTHER PRODUCTS</a>
                             <ul class="dropdown other_products">

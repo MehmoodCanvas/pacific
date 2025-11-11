@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Variant;
 use App\Models\Leads;
+use App\Models\Ratings;
 class Ecommerce extends Controller
 {
 
@@ -81,5 +82,29 @@ class Ecommerce extends Controller
         flash()->success('Lead created successfully');
 
         return redirect()->back();
+    }
+
+    public function store_review(Request $request){
+
+        $review = new Ratings();
+        $review->ratings_name= $request->name;
+        $review->ratings_business= $request->position;
+        $review->ratings_email= $request->email;
+        $review->ratings_star= $request->clr;
+        $review->ratings_feedback= $request->feedback;
+
+
+    if($request->hasfile('r_file')){
+        $imageName = time().'.'.$request->r_file->extension();
+     
+        $request->r_file->move(public_path('storage/review'), $imageName);
+        $review->ratings_pic = $imageName;
+
+    }
+            $review->save();
+                    flash()->success('Review added successfully');
+
+        return redirect()->back();
+
     }
 }

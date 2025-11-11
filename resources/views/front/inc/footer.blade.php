@@ -371,24 +371,26 @@
     <div class="modal-content">
         <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
           <div class="modal-body">
+            <form action="{{ route('post.review') }}" method='POST' enctype="multipart/form-data">
+                @csrf
             <div class="quote_modal_text">
                 <h6 class="heading">SUBMIT A TESTIMONIAL <br> ON HOW WE DID!</h6>
                 <div class="quote_modal_input">
-                    <input type="text" placeholder="Enter Your Name *" required>
+                    <input type="text" placeholder="Enter Your Name *" name='name' required>
                 </div>
                 <div class="quote_modal_input">
-                    <input type="text" placeholder="Business Name & Position *" required>
+                    <input type="text" placeholder="Business Name & Position *" name='position' required>
                 </div>
                 <div class="quote_modal_input">
-                    <input type="email" placeholder="Enter Your Email *" required>
+                    <input type="email" placeholder="Enter Your Email *" name='email' required>
                 </div>
                 <div class="quote_modal_rating">
                     <div class="rating">
-                        <input type="radio" name="clr" style="--c: #FFC247" />
-                        <input type="radio" name="clr" style="--c: #FFC247" />
-                        <input type="radio" name="clr" style="--c: #FFC247" />
-                        <input type="radio" name="clr" style="--c: #FFC247" />
-                        <input type="radio" name="clr" style="--c: #FFC247" />
+                        <input type="radio" value='1' name="clr" style="--c: #FFC247" />
+                        <input type="radio" value='2' name="clr" style="--c: #FFC247" />
+                        <input type="radio" value='3' name="clr" style="--c: #FFC247" />
+                        <input type="radio" value='4' name="clr" style="--c: #FFC247" />
+                        <input type="radio" value='5' name="clr" style="--c: #FFC247" />
                     </div>
                 </div>
                 <div class="quote_modal_input">
@@ -397,11 +399,11 @@
                         <img src="{{asset('assets/front/images/file_ico.png')}}" class="img-fluid" alt="">
                         <p>Accepted file types: jpg, gif, png, pdf, Max. file size: 10 MB.</p>
                         <p>File types are png, and jpg. Under 5MB in size.</p>
-                        <input type="file">
+                        <input type="file" name='r_file'>
                     </div>
                 </div>
                 <div class="quote_modal_input">
-                    <textarea placeholder="Your Testimonial *" required></textarea>
+                    <textarea placeholder="Your Testimonial *" name='feedback' required></textarea>
                 </div>
                 <div class="quote_modal_checkbox">
                     <label class="check-container" for="check-box">
@@ -433,10 +435,11 @@
                     </label>
                 </div>
                 <div class="quote_modal_btn">
-                    <a href="#!" class="common_btn dark_btn">Submit</a>
+                    <input type='submit' value='Submit'>
                 </div>
             </div>
-          </div>
+            </form>
+        </div>
     </div>
   </div>
 </div>
