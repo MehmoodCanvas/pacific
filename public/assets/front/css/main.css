@@ -756,10 +756,8 @@ ul.dropdown li:hover{
 .index_eight_cr_box:hover .index_eight_cr_hov_img{
     opacity: 1;
 }
-.index_eight_cr_img {
+.index_eight_cr_img{
     transition: opacity 0.7s ease;
-    width: 100%;
-    height: 300px;
 }
 .index_eight_cr_text h6{
     font-size: 22px;
@@ -1190,9 +1188,11 @@ ul.dropdown li:hover{
 /*ADDITIONAL CSS*/
 
 .qoute_modal .modal-content {
-    border-radius: 8px;
+    border-radius: 35px;
     border: none;
-    box-shadow: 5px 4px 0px 1px #8B0E04;
+    box-shadow: 5px 4px 0px 1px #25561a;
+    background: #ffffffc7;
+    backdrop-filter: blur(10px);
 }
 button.close_btn {
     position: absolute;
@@ -1211,31 +1211,44 @@ button.close_btn {
     text-align: center;
 }
 .quote_modal_text h6 {
-    margin: 0px 0px 20px 0px;
-    font-size: 50px;
+    margin: 0px 0px 40px 0px;
+    font-size: 35px;
 }
 .quote_modal_input input {
     width: 100%;
-    height: 50px;
+    height: 55px;
     background-color: transparent;
     font-family: var(--Kanit-Regular);
     color: var(--black);
-    border: none;
-    border-bottom: 1px solid var(--black);
-    padding: 10px 0px;
+    border: 1px solid var(--black);
+    padding: 20px 10px;
+    border-radius: 10px;
 }
 .quote_modal_input input::placeholder{
     color: var(--black);
 }
-.quote_modal_input select {
+.quote_modal_input textarea {
     width: 100%;
-    height: 50px;
+    height: 155px;
     background-color: transparent;
     font-family: var(--Kanit-Regular);
     color: var(--black);
-    border: none;
-    border-bottom: 1px solid var(--black);
-    padding: 10px 0px;
+    border: 1px solid var(--black);
+    padding: 20px 10px;
+    border-radius: 10px;
+}
+.quote_modal_input textarea::placeholder{
+    color: var(--black);
+}
+.quote_modal_input select {
+    width: 100%;
+    height: 55px;
+    background-color: transparent;
+    font-family: var(--Kanit-Regular);
+    color: var(--black);
+    border: 1px solid var(--black);
+    padding: 10px 10px;
+    border-radius: 10px;
 }
 .quote_modal_input {
     margin: 0px 0px 15px 0px;
@@ -1252,6 +1265,51 @@ button.close_btn {
     text-align: start;
     margin: 40px 0px 0px 0px;
 }
+
+.check-container {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  padding: 0px 0px 0px 40px;
+}
+.check {
+  position: absolute;
+  appearance: none;
+}
+.check-toggle {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-11px);
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 0.25em;
+  border: 2px solid #000000;
+}
+.check-toggle + .check-svg {
+  position: absolute;
+  left: -3px;
+  top: 50%;
+  height: 2rem;
+  width: 2rem;
+  transform: translateY(-14px);
+  transition: stroke-dashoffset 0.5s ease-out;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+}
+.check:checked + .check-toggle + .check-svg {
+  stroke-dashoffset: 0;
+}
+.check-label {
+  font-size: 16px;
+  user-select: none;
+  font-family: var(--Kanit-Regular);
+  color: var(--black);
+}
+
+
+
 /*ADDITIONAL CSS*/
 .dropdown.other_products {
     left: -500px;
@@ -1764,6 +1822,7 @@ button.close_btn {
     overflow-y: scroll;
     overflow-x: hidden;
     padding: 20px;
+    height: 700px;
 }
 .quote-modal .offcanvas-body::-webkit-scrollbar {
     width: 5px;
@@ -1867,9 +1926,18 @@ button.close_btn {
     font-family: var(--Kanit-Regular);
     margin: 10px 0px 0px 0px;
 }
+.quote_input_wrap .file_input_wrap {
+    border: 1.377px solid var(--white);
+}
+.quote_input_wrap .file_input_wrap img {
+    filter: invert(1) brightness(10);
+}
+.quote_input_wrap .file_input_wrap p {
+    color: var(--white);
+}
+
 
 /* CHECKOUT-SIDEBAR-CSS */
-
 .reviews_wrapper {
     padding: 100px 0px;
 }
@@ -1914,9 +1982,223 @@ button.close_btn {
 .reviews_wrapper .testimonial_slide:nth-child(even) {
      transform: translateY(0px); 
 }
-.index_eight_cr_text h6{
-    margin: 0px 0px 30px 0px;
+.qoute_modal .modal-body {
+    padding: 30px 30px 50px 30px;
 }
-.index_eight_cr_text p{
-    display: none;
+.file_input_wrap {
+    border: 1.377px solid rgb(0 0 0);
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+    border-radius: 10px;
 }
+.file_input_wrap img {
+    margin: 0px 0px 15px 0px;
+    filter: invert(1) brightness(0);
+}
+.file_input_wrap p {
+    font-size: 15px;
+    color: #000000;
+    font-family: var(--Kanit-Regular);
+}
+.file_input_wrap input {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+
+/* CONTACT Css  */
+
+.contact-wrapper{
+	padding: 50px 0px 100px 0px;
+}
+.contact-wrap-ttext h6{
+	font-size: 70px;
+	font-family: var(--kanit-regular);
+	color: var(--black);
+	width: 700px;
+	line-height: 1;
+}
+.contact-wrap-ttext {
+    margin: 0px 0px 60px 0px;
+}
+.contact-socials-box {
+    padding: 30px;
+    border-radius: 30px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.5s all;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--black);
+}
+.contact-socials-box:hover{
+	background-color: var(--white);
+	border-color: var(--black);
+}
+.contact-socials-box:hover .contact-socials-icon i{
+	transform: rotate(360deg);
+	background-color: var(--black);
+	color: var(--white);
+}
+.contact-socials-icon i{
+	transition: 0.3s all;
+	background-color: var(--black);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 60px;
+	height: 60px;
+	border-radius: 30px;
+	font-size: 22px;
+	transition: 0.3s all;
+	color: var(--white);
+}
+.contact-socials-box:hover .contact-socials-text h6{
+	color: var(--black);
+	transform: translate(10px , -10px);
+}
+.contact-socials-text h6{
+	font-family: var(--Kanit-Regular);
+	font-size: 25px;
+	color: var(--black);
+	transition: 0.3s all;
+	text-transform: capitalize;
+}
+.contact-wrap-textarea{
+	position: relative;
+}
+.contact-wrap-textarea textarea{
+	width: 100%;
+	height: 150px;
+	background-color: transparent;
+	padding: 25px 25px;
+	border-radius: 10px;
+	color: var(--black);
+	font-size: 16px;
+	font-family: var(--Kanit-Regular);
+	resize: none;
+	position: relative;
+	transition: 0.5s ease;
+	border: 1px solid var(--black);
+}
+.contact-form-box{
+    background-color: transparent;
+    padding: 50px 40px;
+    border-radius: 30px;
+    border: 1px solid var(--black);
+}
+.contact-form-ttext{
+	margin: 0px 0px 30px 0px;
+}
+.contact-form-ttext h6{
+	font-family: var(--Kanit-Regular);
+	font-size: 40px;
+	color: var(--black);
+	transition: 0.3s all;
+}
+.contact-wrap-textarea button{
+	border: 1px solid var(--black);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 65px;
+	background-color: var(--white);
+	color: var(--black);
+	font-family: var(--Kanit-Regular);
+	font-size: 16px;
+	border-radius: 10px;
+	transition: 0.5s all;
+	position: relative;
+	margin: 0px 0px 60px 0px;
+	outline: none;
+}
+.contact-wrap-textarea button:hover{
+	color: var(--white);
+	background-color: transparent;
+	border-color: var(--white);
+}
+.contact-form-bottom h6{
+	font-size: 18px;
+	font-family: var(--Kanit-Regular);
+	color: var(--black);
+	margin: 0px 0px 10px 0px;
+	text-transform: capitalize;
+}
+.contact-form-etext{
+	padding: 10px 20px;
+	border-radius: 10px;
+	height: 65px;
+	display: flex;
+	align-items: center;
+	transition: 0.3s all;
+	background-color: transparent;
+	border: 1px solid var(--black);
+}
+.contact-form-etext:hover{
+	background-color: var(--black);
+	border-color: var(--white);
+}
+.contact-form-etext p{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-family: var(--Kanit-Regular);
+	font-size: 18px;
+	color: var(--black);
+	width: 67%;
+	transition: 0.3s all;
+}
+.contact-form-etext:hover p{
+	color: var(--white);
+}
+.contact-form-etext span i{
+	font-size: 20px;
+	transition: 0.3s all;
+}
+.contact-form-etext:hover i{
+	transform: rotate(360deg);
+}
+.index-sixth-wrap-input{
+	position: relative;
+}
+.index-sixth-wrap-input input{
+	width: 100%;
+	height: 60px;
+	background-color: transparent;
+	padding: 0px 20px;
+	border-radius: 10px;
+	color: var(--black);
+	font-size: 16px;
+	font-family: var(--Kanit-Regular);
+	position: relative;
+	transition: 0.5s ease;
+	border: 1px solid var(--black);
+}
+.index-sixth-wrap-input input::placeholder{
+    color: var(--black);
+}
+.contact-wrap-textarea textarea::placeholder{
+    color: var(--black);
+}
+.contact-wrap-textarea1 button {
+    width: 100%;
+    border: 1px solid;
+    padding: 18px 20px;
+}
+.contact-wrap-textarea1 {
+    margin: 0px 0px 50px 0px;
+}
+/* CONTACT Css  */
