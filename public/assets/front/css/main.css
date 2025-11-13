@@ -1265,7 +1265,9 @@ button.close_btn {
     text-align: start;
     margin: 40px 0px 0px 0px;
 }
-
+.quote_modal_btn input:hover {
+    background: var(--black) !important;
+}
 .check-container {
   position: relative;
   display: flex;

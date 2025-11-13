@@ -435,7 +435,7 @@
                     </label>
                 </div>
                 <div class="quote_modal_btn">
-                    <input type='submit' value='Submit'>
+                    <input class="common_btn" type='submit' value='Submit'>
                 </div>
             </div>
             </form>
