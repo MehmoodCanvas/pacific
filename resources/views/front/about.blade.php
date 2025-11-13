@@ -21,7 +21,7 @@
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                 <div class="about_first_wrap_img">
-                    <img src="assets/front/images/about_img.png" class="img-fluid" alt="">
+                    <img src="{{ asset('assets/front/images/about_img.png') }}" class="img-fluid" alt="">
                 </div>
             </div>
         </div>
