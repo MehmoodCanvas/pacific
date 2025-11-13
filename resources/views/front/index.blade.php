@@ -173,6 +173,17 @@
             <img src="{{ asset('assets/front/images/fourth_mrq_3.png') }}" class="img-fluid" alt="">
             <img src="{{ asset('assets/front/images/fourth_mrq_4.png') }}" class="img-fluid" alt="">
             <img src="{{ asset('assets/front/images/fourth_mrq_5.png') }}" class="img-fluid" alt="">
+            <img src="{{ asset('assets/front/images/fourth_mrq_1.png') }}" class="img-fluid" alt="">
+            <img src="{{ asset('assets/front/images/fourth_mrq_2.png') }}" class="img-fluid" alt="">
+            <img src="{{ asset('assets/front/images/fourth_mrq_3.png') }}" class="img-fluid" alt="">
+            <img src="{{ asset('assets/front/images/fourth_mrq_4.png') }}" class="img-fluid" alt="">
+            <img src="{{ asset('assets/front/images/fourth_mrq_5.png') }}" class="img-fluid" alt="">
+            <img src="{{ asset('assets/front/images/fourth_mrq_3.png') }}" class="img-fluid" alt="">
+            <img src="{{ asset('assets/front/images/fourth_mrq_4.png') }}" class="img-fluid" alt="">
+            <img src="{{ asset('assets/front/images/fourth_mrq_5.png') }}" class="img-fluid" alt="">
+            <img src="{{ asset('assets/front/images/fourth_mrq_1.png') }}" class="img-fluid" alt="">
+            <img src="{{ asset('assets/front/images/fourth_mrq_2.png') }}" class="img-fluid" alt="">
+            <img src="{{ asset('assets/front/images/fourth_mrq_3.png') }}" class="img-fluid" alt="">
         </div>
     </div>
 </section>
