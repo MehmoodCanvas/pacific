@@ -6,7 +6,7 @@
         width: 290vw;
     }
     .reviews_wrapper .testimonial_slide_wrap {
-        width: 660vw;
+        width: max-content;
     }
 }
 @media only screen and (max-width: 1799px){
