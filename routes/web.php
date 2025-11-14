@@ -69,6 +69,7 @@ Route::get('cartCounter',[Ecommerce::class,'cartCounter']);
 Route::get('reviews',[Main::class,'reviews']);
 Route::get('smart-patch',[Main::class,'patch']);
 Route::get('meet-dr-patch',[Main::class,'meet_dr']);
+Route::get('contact-us',[Main::class,'contact']);
 
 
 
@@ -76,3 +77,4 @@ Route::get('meet-dr-patch',[Main::class,'meet_dr']);
 Route::post('addtoCart',[Ecommerce::class,'builder_cart']);
 Route::post('review-post',[Ecommerce::class,'store_review'])->name('post.review');
 Route::post('lead',[Ecommerce::class,'lead'])->name('lead');
+Route::post('post-contact',[Main::class,'store_contact']);

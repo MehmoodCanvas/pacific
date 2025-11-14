@@ -34,6 +34,10 @@ class Main extends Controller
     }
 
 
+    public function contact(){
+        return view('front.contact-us');
+    }
+
 
     public function product($id){
 
@@ -55,5 +59,20 @@ class Main extends Controller
 
     public function meet_dr(){
         return view('front.meet-dr-patch');
+    }
+
+
+    public function store_contact(){
+
+        $contact = new Contact();
+        $contact->f_name=$request->f_name;
+        $contact->l_name=$request->l_name;
+        $contact->email=$request->email;
+        $contact->phone=$request->phone;
+        $contact->message=$request->message;
+        $contact->save();
+        return redirect()->back()->with('success','We will contact you soon added successfully');
+
+
     }
 }
