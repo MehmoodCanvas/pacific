@@ -728,6 +728,11 @@ ul.dropdown li:hover{
     justify-content: space-between;
     width: 260vw;
     animation: 50s linear 0s infinite normal none running testimonialMarquee;
+    gap: 90px;
+}
+.reviews_wrapper .testimonial_slide_wrap {
+    width: max-content;
+    gap: 90px;
 }
 .testimonial_slide_wrap:hover{
     animation-play-state: paused;
