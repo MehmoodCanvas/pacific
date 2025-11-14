@@ -29,27 +29,7 @@ class Ecommerce extends Controller
             'cart_count' => \Cart::getContent()->count(),
         ]);
     }
-    public function builder_cart(Request $request){
-        $product = $request->get('product');
-        $variant = $request->get('variant');
 
-        $productData = Product::find($product);
-        $variantData = Variant::find($variant);
-        $finalPrice = $productData->product_price + $variantData->variant_price;
-        \Cart::add(array(
-            'id' => $productData->product_id,
-            'name' => $productData->product_name,
-            'price' => $finalPrice,
-            'quantity' => 1,
-            'attributes' => array('variant'=>$variantData->variant_id)
-        ));
-        return response()->json([
-            'status' => 'success',
-            'message' => 'Product added to cart successfully',
-            'cart_count' => \Cart::getTotalQuantity(),
-            'cart_total' => \Cart::getTotal()
-        ]);
-    }
 
 
     public function lead(Request $request){
@@ -60,7 +40,7 @@ class Ecommerce extends Controller
             'phone' => 'required|string|max:20',
             'product_id' => 'required|integer|exists:product,product_id',
             'product_size' => 'required|string|max:100',
-            'art_image' => 'nullable|file|mimes:jpg,gif,png,pdf|max:10240', // max 10MB
+            'art_image' => 'nullable|file|mimes:jpg,gif,png,pdf|max:10240',
         ]);
         $lead = new Leads();
         $lead->lead_name = $request->input('name');
@@ -81,7 +61,7 @@ class Ecommerce extends Controller
         
         flash()->success('Lead created successfully');
 
-        return redirect()->back();
+        return redirect()->back()->with('success','Lead added successfully');
     }
 
     public function store_review(Request $request){
@@ -102,9 +82,9 @@ class Ecommerce extends Controller
 
     }
             $review->save();
-                    flash()->success('Review added successfully');
+        flash()->success('Review added successfully');
 
-        return redirect()->back();
+        return redirect()->back()->with('success','Review added successfully');
 
     }
 }

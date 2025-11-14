@@ -64,38 +64,41 @@
                     <div class="contact-form-ttext">
                         <h6>Drop us a message:</h6>
                     </div>
+                    <form action='{{ url('post-contact') }}' method='POST'>
+                        @csrf
                     <div class="row gy-3">
                         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                             <div class="index-sixth-wrap-input">
-                                <input type="text" placeholder="First Name*">
+                                <input type="text" placeholder="First Name*" name='f_name'>
                             </div>
                         </div>
                         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                             <div class="index-sixth-wrap-input">
-                                <input type="text" placeholder="Last Name*">
+                                <input type="text" placeholder="Last Name*" name='l_name'>
                             </div>
                         </div>
                         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                             <div class="index-sixth-wrap-input">
-                                <input type="email" placeholder="Email*">
+                                <input type="email" placeholder="Email*" name='email'>
                             </div>
                         </div>
                         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                             <div class="index-sixth-wrap-input">
-                                <input type="tel" placeholder="Phone*">
+                                <input type="tel" placeholder="Phone*" name='phone'>
                             </div>
                         </div>
                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                             <div class="contact-wrap-textarea">
-                                <textarea  placeholder="Message"></textarea>
+                                <textarea  placeholder="Message" name="message"></textarea>
                             </div>
                         </div>
                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                             <div class="contact-wrap-textarea1">
-                                <button class="common_btn">Submit Now</button>
+                                <button class="common_btn" type="submit">Submit Now</button>
                             </div>
                         </div>
                     </div>
+                </form>
                     <div class="contact-form-bottom">
                         <h6>Or email us at:</h6>
                         <a href="mailto:quotes@PacificEmblem.com">
