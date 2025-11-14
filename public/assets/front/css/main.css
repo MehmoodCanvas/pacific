@@ -777,7 +777,7 @@ ul.dropdown li:hover{
     margin: 0px 0px 30px 0px;
 }
 .index_eight_cr_text a {
-    padding: 15px 50px;
+    padding: 20px 50px;
 }
 .index_eight_cr_img_wrap{
     overflow: hidden;
@@ -1195,9 +1195,11 @@ ul.dropdown li:hover{
 /*ADDITIONAL CSS*/
 
 .qoute_modal .modal-content {
-    border-radius: 8px;
+    border-radius: 35px;
     border: none;
-    box-shadow: 5px 4px 0px 1px #8B0E04;
+    box-shadow: 5px 4px 0px 1px #25561a;
+    background: #ffffffc7;
+    backdrop-filter: blur(10px);
 }
 button.close_btn {
     position: absolute;
@@ -1769,6 +1771,7 @@ button.close_btn {
     overflow-y: scroll;
     overflow-x: hidden;
     padding: 20px;
+    height: 700px;
 }
 .quote-modal .offcanvas-body::-webkit-scrollbar {
     width: 5px;
@@ -1872,7 +1875,42 @@ button.close_btn {
     font-family: var(--Kanit-Regular);
     margin: 10px 0px 0px 0px;
 }
+.quote_input_wrap .file_input_wrap {
+    border: 1.377px solid var(--white);
+}
+.quote_input_wrap .file_input_wrap img {
+    filter: invert(1) brightness(10);
+}
+.quote_input_wrap .file_input_wrap p {
+    color: var(--white);
+}
 
+.file_input_wrap {
+    border: 1.377px solid rgb(0 0 0);
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+    border-radius: 10px;
+}
+.file_input_wrap img {
+    margin: 0px 0px 15px 0px;
+    filter: invert(1) brightness(0);
+}
+.file_input_wrap p {
+    font-size: 15px;
+    color: #000000;
+    font-family: var(--Kanit-Regular);
+}
+.file_input_wrap input {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
 /* CHECKOUT-SIDEBAR-CSS */
 .reviews_wrapper {
     padding: 100px 0px;
@@ -1894,7 +1932,7 @@ button.close_btn {
     color: var(--black);
 }
 .reviews_wrapper .testimonial_slide {
-    width: 1000px;
+    width: 700px;
     display: flex;
     align-items: center;
     gap: 40px;
@@ -1909,18 +1947,43 @@ button.close_btn {
     border-radius: 20px;
 }
 .review_img {
-    width: 350px;
-    height: 300px;
+    width: 300px;
+    height: 270px;
 }
 .review_text {
     padding: 0px 30px 0px 0px;
-    width: calc(100% - 350px);
+    width: calc(100% - 300px);
 }
 .reviews_wrapper .testimonial_slide:nth-child(even) {
      transform: translateY(0px); 
 }
 
-
+.file_input_wrap {
+    border: 1.377px solid rgb(0 0 0);
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+    border-radius: 10px;
+}
+.file_input_wrap img {
+    margin: 0px 0px 15px 0px;
+    filter: invert(1) brightness(0);
+}
+.file_input_wrap p {
+    font-size: 15px;
+    color: #000000;
+    font-family: var(--Kanit-Regular);
+}
+.file_input_wrap input {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
 
 
 /* CONTACT Css  */
@@ -2111,4 +2174,49 @@ button.close_btn {
 .contact-wrap-textarea1 {
     margin: 0px 0px 50px 0px;
 }
+.quote_modal_rating {
+    margin: 0px 0px 10px 0px;
+}
+.quote_modal_input .file_input_wrap {
+    padding: 25px 20px;
+}
+.rating {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 4px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: 1px solid var(--black);
+}
+.rating input {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.rating input::before {
+  content: '\f005';
+  position: absolute;
+  font-family: fontAwesome;
+  font-size: 28px;
+  color: #111;
+  transition: 0.5s;
+}
+.rating input:hover ~ input::before,
+.rating input:hover::before,
+.rating input:checked ~ input::before,
+.rating input:checked::before {
+  color: var(--c);
+}
 /* CONTACT Css  */
+
+.qoute_modal .modal-body {
+    padding: 30px 30px 50px 30px;
+}
