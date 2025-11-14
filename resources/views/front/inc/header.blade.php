@@ -96,7 +96,7 @@
                                         @php 
                                         $image = json_decode($product->product_image)
                                         @endphp
-                                        <img src="{{asset('storage/products/'.$image[0])}}" class="img-fluid" alt="">
+                                        <img src="{{ asset('storage/product/'.$image[0]) }}" />
                                         <p>{{$product->product_name}}</p>
                                     </a>
                                 </li>
