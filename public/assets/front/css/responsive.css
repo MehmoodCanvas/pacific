@@ -29,7 +29,7 @@
         padding: 0px 0px 0px 40px;
     }
     .testimonial_slide_wrap {
-        width: 300vw;
+        width: max-content;
     }
     .pro_detail_text h6 {
         font-size: 35px;

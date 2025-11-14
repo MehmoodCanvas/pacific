@@ -725,7 +725,6 @@ ul.dropdown li:hover{
 }
 .testimonial_slide_wrap {
     display: flex;
-    justify-content: space-between;
     width: max-content;
     animation: 50s linear 0s infinite normal none running testimonialMarquee;
     gap: 90px;
