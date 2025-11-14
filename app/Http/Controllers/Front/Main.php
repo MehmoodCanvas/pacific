@@ -36,6 +36,7 @@ class Main extends Controller
 
 
     public function product($id){
+
         $product = Product::where('product_slug', $id)->first();
         $category = Category::find($product->product_category_id);
         $recentProducts = Product::OrderBy('product_id', 'DESC')->where('product_slug','!=',$id)->take(4)->get();

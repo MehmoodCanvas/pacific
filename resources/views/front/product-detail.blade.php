@@ -1,5 +1,5 @@
-@include('front.inc.header')
 
+@include('front.inc.header')
 <section class="pro_detail_wrapper">
     <div class="container">
         <div class="row align-items-center gx-md-5">

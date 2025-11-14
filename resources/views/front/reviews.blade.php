@@ -35,7 +35,7 @@
                             @endfor
                         </ul>
                         <p class="desc">{{$review->ratings_feedback}}</p>
-                        <h5{{$review->ratings_name}} </h5>
+                        <h5>{{$review->ratings_name}}</h5>
                     </div>
                 </div>
                 @endforeach

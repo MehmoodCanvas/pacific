@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
     {
         Paginator::useBootstrapFive();
 
-        $products = DB::table('product')->orderBy('product_id', 'DESC')->select('product_id','product_name')->get();
+        $products = DB::table('product')->orderBy('product_id', 'DESC')->select('product_id','product_name','product_image','product_slug')->get();
         view()->share('sidebars', $products);        
     }
 }
