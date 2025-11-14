@@ -104,13 +104,13 @@
                                 @endforeach
                             </ul>
                         </li>
-                        <li><a href="#!">TRULYCUSTOM™ HEADWEAR</a></li>
+                        <li><a href="{{ url('product/truly-custom-headwear') }}">TRULYCUSTOM™ HEADWEAR</a></li>
                         <li><a href="{{ url('smart-patch') }}">SMARTPATCH <img src="assets/front/images/r_ico.png" class="img-fluid r_img" alt=""></a></li>
                         <li class="has_dropdown">
                             <a href="#!">OTHER PRODUCTS</a>
                             <ul class="dropdown other_products">
                                 <li>
-                                    <a href="#!">
+                                    <a href="{{ url('product/') }}">
                                         <img src="{{asset('assets/front/images/menu_ico11.png')}}" class="img-fluid" alt="">
                                         <p>Lanyards and Trade Show Badges</p>
                                     </a>
