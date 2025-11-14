@@ -550,7 +550,7 @@ ul.dropdown li:hover{
 .index_first_cr_text {
     position: absolute;
     left: 20px;
-    bottom: -40px;
+    bottom: -60px;
     z-index: 9;
     transition: 0.4s ease;
 }
