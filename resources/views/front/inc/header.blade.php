@@ -90,66 +90,17 @@
                         <li class="has_dropdown">
                             <a href="#!">PATCHES/EMBLEMS</a>
                             <ul class="dropdown">
+                                @foreach($products as $product)
                                 <li>
-                                    <a href="#!">
-                                        <img src="{{asset('assets/front/images/menu_ico1.png')}}" class="img-fluid" alt="">
-                                        <p>Embroidered/Merrowed Patches</p>
+                                    <a href="{{ url('product/'.$product->product_slug) }}">
+                                        @php 
+                                        $image = json_decode($product->product_image)
+                                        @endphp
+                                        <img src="{{asset('storage/products/'.$image[0])}}" class="img-fluid" alt="">
+                                        <p>{{$product->product_name}}</p>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="#!">
-                                        <img src="{{asset('assets/front/images/menu_ico2.png')}}" class="img-fluid" alt="">
-                                        <p>LaserCUT/Embroidered Patches</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#!">
-                                        <img src="{{asset('assets/front/images/menu_ico3.png')}}" class="img-fluid" alt="">
-                                        <p>Woven Patches</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#!">
-                                        <img src="{{asset('assets/front/images/menu_ico4.png')}}" class="img-fluid" alt="">
-                                        <p>Dye Sublimated Patches</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#!">
-                                        <img src="{{asset('assets/front/images/menu_ico5.png')}}" class="img-fluid" alt="">
-                                        <p>Soft PVC/Rubber Patches</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#!">
-                                        <img src="{{asset('assets/front/images/menu_ico6.png')}}" class="img-fluid" alt="">
-                                        <p>Mixed Medium Patches</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#!">
-                                        <img src="{{asset('assets/front/images/menu_ico7.png')}}" class="img-fluid" alt="">
-                                        <p>Chenille Patches</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#!">
-                                        <img src="{{asset('assets/front/images/menu_ico8.png')}}" class="img-fluid" alt="">
-                                        <p>Woven Labels</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#!">
-                                        <img src="{{asset('assets/front/images/menu_ico9.png')}}" class="img-fluid" alt="">
-                                        <p>TPU, Silicone & Specialty Patches</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#!">
-                                        <img src="{{asset('assets/front/images/menu_ico10.png')}}" class="img-fluid" alt="">
-                                        <p>Packaged Patches</p>
-                                    </a>
-                                </li>
+                                @endforeach
                             </ul>
                         </li>
                         <li><a href="#!">TRULYCUSTOM™ HEADWEAR</a></li>
