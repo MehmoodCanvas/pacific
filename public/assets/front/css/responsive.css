@@ -240,6 +240,15 @@
     .pro_media_slides .swiper-slide {
         height: 120px;
     }
+    .footer-wrap-link ul li a {
+        font-size: 16px;
+    }
+    .footer-wrap-link h3 {
+        font-size: 18px;
+    }
+    .index_eight_cr_img {
+        height: 230px;
+    }
 }
 @media only screen and (max-width: 1199px){
 }
