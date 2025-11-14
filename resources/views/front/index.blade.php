@@ -67,7 +67,7 @@
 
             @foreach($products as $item)
             <div class="swiper-slide">
-                <div class="index_first_cr_box">
+                <a href="{{ url('product/'.$item->product_slug) }}" class="index_first_cr_box">
                     <div class="index_first_cr_img">
                         @php
                             $image = json_decode($item->product_image);
@@ -76,9 +76,9 @@
                     </div>
                     <div class="index_first_cr_text">
                         <h6>{{ $item->product_name }}</h6>
-                        <a href="{{ url('product/'.$item->product_slug) }}" class="common_btn">Request A Quote</a>
+                        <button class="common_btn">Request A Quote</button>
                     </div>
-                </div>
+                </a>
             </div>
             @endforeach
 

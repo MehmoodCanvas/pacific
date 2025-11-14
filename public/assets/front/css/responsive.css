@@ -249,6 +249,9 @@
     .index_eight_cr_img {
         height: 230px;
     }
+    .quote-modal .offcanvas-body {
+        height: 550px;
+    }
 }
 @media only screen and (max-width: 1199px){
 }

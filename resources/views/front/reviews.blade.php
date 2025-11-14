@@ -17,9 +17,9 @@
             <h6 class="heading">Love Our Service?</h6>
             <a href="#sub_review" data-bs-toggle="modal" data-bs-target="#sub_review" class="common_line_btn">Submit your testimonial.</a>
         </div>
-        <div class="testimonial_slider">
-            <div class="testimonial_slide_wrap">
-                @foreach($reviews as $review)
+        <div class="row gy-4">
+            @foreach($reviews as $review)
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                 <div class="testimonial_slide">
                     <div class="review_img">
                         <img src="{{asset('storage/review/'.$review->ratings_pic)}}" class="img-fluid" alt="">
@@ -36,10 +36,11 @@
                         </ul>
                         <p class="desc">{{$review->ratings_feedback}}</p>
                         <h5>{{$review->ratings_name}}</h5>
+                        <h4>{{$review->ratings_business}}</h4>
                     </div>
                 </div>
-                @endforeach
             </div>
+            @endforeach
         </div>
     </div>
 </section>

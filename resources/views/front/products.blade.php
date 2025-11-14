@@ -70,27 +70,27 @@
                          
                             @foreach($products as $product)
                             <div class="col-6 col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
-                                <div class="index_eight_cr_box">
+                                <a href="{{ url('product/'.$product->product_slug) }}" class="index_eight_cr_box">
                                     <div class="index_eight_cr_img_wrap">
                                         <div class="index_eight_cr_img">
-                                    @php 
-                                        $image = json_decode($product->product_image);
-                                    @endphp
+                                            @php 
+                                                $image = json_decode($product->product_image);
+                                            @endphp
 
-                                    <img src="{{ asset('storage/product/'.$image[0]) }}" class="img-fluid" alt="">
-                                </div>
-                                @if(!empty($image[1]))
-                                <div class="index_eight_cr_hov_img">
-                                    <img src="{{ asset('storage/product/'.$image[1]) }}" class="img-fluid" alt="">
-                                </div>
-                                @endif
+                                            <img src="{{ asset('storage/product/'.$image[0]) }}" class="img-fluid" alt="">
+                                        </div>
+                                            @if(!empty($image[1]))
+                                            <div class="index_eight_cr_hov_img">
+                                                <img src="{{ asset('storage/product/'.$image[1]) }}" class="img-fluid" alt="">
+                                            </div>
+                                            @endif
                                     </div>
                                     <div class="index_eight_cr_text">
                                         <h6>{{ $product->product_name }}</h6>
                                         <p class="desc">${{ $product->product_price }}</p>
-                                        <a href="{{ url('product/'.$product->product_slug) }}" class="common_btn dark_btn">CUSTOMIZE</a>
+                                        <button class="common_btn dark_btn">Request A Quote</button>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                             @endforeach
 
