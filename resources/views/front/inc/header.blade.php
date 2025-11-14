@@ -90,7 +90,7 @@
                         <li class="has_dropdown">
                             <a href="#!">PATCHES/EMBLEMS</a>
                             <ul class="dropdown">
-                                @foreach($products as $product)
+                                @foreach($sidebars as $product)
                                 <li>
                                     <a href="{{ url('product/'.$product->product_slug) }}">
                                         @php 
