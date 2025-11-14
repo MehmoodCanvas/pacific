@@ -23,6 +23,7 @@
             <th>Size</th>
             <th>Product</th>
             <th>Art</th>
+            <th>Date</th>
         </thead>
         <tbody>
           @foreach($order as $orders)
@@ -35,6 +36,7 @@
             <td> {{$orders->product_size}}</td>
             <td> <a href='{{url('product/'.$orders->product_slug)}}' target="_blank">{{$orders->product_name}}</a></td>
             <td> @if(!empty($orders->product_art))<img src={{ asset('storage/arts/'.$orders->product_art) }}>@endif</td>
+            <td> {{$orders->created_at}}</td>
           </tr>
           @endforeach
         </tbody>
