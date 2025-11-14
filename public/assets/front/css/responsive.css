@@ -6,7 +6,7 @@
         width: 290vw;
     }
     .reviews_wrapper .testimonial_slide_wrap {
-        width: 660vw;
+        width: max-content;
     }
 }
 @media only screen and (max-width: 1799px){
@@ -29,7 +29,7 @@
         padding: 0px 0px 0px 40px;
     }
     .testimonial_slide_wrap {
-        width: 300vw;
+        width: max-content;
     }
     .pro_detail_text h6 {
         font-size: 35px;

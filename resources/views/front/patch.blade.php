@@ -12,7 +12,7 @@
                             <img src="{{asset('assets/front/images/smart-stone.png')}}" alt="">
                         </div>
                         <div class="smartPatch_phone_bg">
-                            <img src="assets/front/images/phone_bg.png" class="img-fluid" alt="">
+                            <img src="{{asset('assets/front/images/phone_bg.png')}}" class="img-fluid" alt="">
                             <div class="smartPatch_phone_screen scrn_1">
                                 <img src="{{asset('assets/front/images/phone_screen1.png')}}" class="img-fluid" alt="">
                             </div>
