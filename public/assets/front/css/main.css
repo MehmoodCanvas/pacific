@@ -720,10 +720,16 @@ ul.dropdown li:hover{
     line-height: 20px;
     font-size: 14px;
 }
-.testimonial_slide h5{
+.testimonial_slide h5 {
     font-size: 20px;
     color: #111111;
     font-family: var(--kanit-medium);
+    margin: 0px 0px 5px 0px;
+}
+.review_text h4 {
+    font-size: 18px;
+    color: #444;
+    font-family: var(--Kanit-Regular);
 }
 .testimonial_slide_wrap {
     display: flex;
@@ -1993,7 +1999,7 @@ button.close_btn {
     color: var(--black);
 }
 .reviews_wrapper .testimonial_slide {
-    width: 700px;
+    width: 100%;
     display: flex;
     align-items: center;
     gap: 40px;

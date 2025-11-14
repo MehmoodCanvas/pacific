@@ -92,7 +92,7 @@
         <div class="row gy-lg-5">
             @foreach($recentProducts as $recentProduct)
             <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
-                <div class="index_eight_cr_box">
+                <a href="{{ url('product/'.$recentProduct->product_slug) }}" class="index_eight_cr_box">
                     <div class="index_eight_cr_img_wrap">
                         <div class="index_eight_cr_img">
                             @php 
@@ -109,9 +109,9 @@
                     </div>
                     <div class="index_eight_cr_text">
                         <h6>{{ $recentProduct->product_name }}</h6>
-                        <a href="{{ url('product/'.$recentProduct->product_slug) }}" class="common_btn dark_btn">CUSTOMIZE</a>
+                        <button class="common_btn dark_btn">Request A Quote</button>
                     </div>
-                </div>
+                </a>
             </div>
             @endforeach
         </div>
