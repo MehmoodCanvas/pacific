@@ -62,7 +62,7 @@
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                 <div class="about_first_wrap_img">
-                    <img src="{{asset('assets/front/images/about_img.png')}}" class="img-fluid" alt="">
+                    <img src="{{asset('assets/front/images/about_1.png')}}" class="img-fluid" alt="">
                 </div>
             </div>
         </div>
@@ -73,8 +73,8 @@
     <div class="container">
         <div class="row align-items-center gy-lg-5">
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                <div class="about_first_wrap_img h_fix">
-                    <img src="{{asset('assets/front/images/about_img1.png')}}" class="img-fluid" alt="">
+                <div class="about_first_wrap_img">
+                    <img src="{{asset('assets/front/images/about_2.png')}}" class="img-fluid" alt="">
                 </div>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
@@ -103,7 +103,7 @@
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                 <div class="about_first_wrap_img">
-                    <img src="{{asset('assets/front/images/about_img.png')}}" class="img-fluid" alt="">
+                    <img src="{{asset('assets/front/images/about_3.png')}}" class="img-fluid" alt="">
                 </div>
             </div>
         </div>
@@ -114,8 +114,8 @@
     <div class="container">
         <div class="row align-items-center gy-lg-5">
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                <div class="about_first_wrap_img h_fix">
-                    <img src="{{asset('assets/front/images/about_img1.png')}}" class="img-fluid" alt="">
+                <div class="about_first_wrap_img">
+                    <img src="{{asset('assets/front/images/about_4.png')}}" class="img-fluid" alt="">
                 </div>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
